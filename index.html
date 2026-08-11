@@ -1,1 +1,43 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Todo App</title>
 
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>☁️ Quản lý công việc</h1>
+        <p class="subtitle">Ứng dụng quản lý công việc trên nền tảng điện toán đám mây</p>
+
+        <div class="input-area">
+            <input 
+                type="text" 
+                id="taskInput" 
+                placeholder="Nhập công việc cần làm..."
+            >
+
+            <button onclick="addTask()">Thêm</button>
+        </div>
+
+        <div class="filter">
+            <button onclick="filterTasks('all')">Tất cả</button>
+            <button onclick="filterTasks('active')">Chưa hoàn thành</button>
+            <button onclick="filterTasks('completed')">Đã hoàn thành</button>
+        </div>
+
+        <ul id="taskList"></ul>
+
+        <p id="emptyMessage">Chưa có công việc nào.</p>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
